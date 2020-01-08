@@ -1,12 +1,12 @@
+library(data.table)
 library(ggplot2)
-library(grid)
-library(ggpubr)
-library(gridExtra)
+# library(grid)
+# library(gridExtra)
 
 #rm(list=ls(all=TRUE))
 #graphics.off()
 
-plot_signatures_3mer <- function(N)
+plot_signatures_3mer <- function(destination_folder, N)
 {
   
   M <- fread(paste0(destination_folder,'3mer_Signatures_(N=',N,').tsv'))
@@ -54,7 +54,7 @@ plot_signatures_3mer <- function(N)
     
     gg <- ggplot(M, aes_string(x='mut_indxs', y = paste0('Signature_No_',n), fill = 'mut_types', group = 'mut_types'))+
           geom_col(width = 0.7)+
-          geom_text(aes(label=mut_id), vjust=-1.5, colour="black",size = 2)+
+          # geom_text(aes(label=mut_id), vjust=-1.5, colour="black",size = 2)+
           theme_bw()+
           theme(legend.position="none")+
           ylab("Contribution (%)")+
@@ -160,12 +160,25 @@ plot_signatures_3mer <- function(N)
     return(gg)    
   }
   
-  M$mut_id <- ''
+  # M$mut_id <- ''
   
   plots <- list()
-  for(i in 1:N){plots[[i]] <- plot_sig_n_3mer(i)}
+  for(i in 1:N){
+      plots[[i]] <- plot_sig_n_3mer(i)
+  }
   
   return(plots)
 }
+
+
+
+
+plts <- plot_signatures_3mer(destination_folder = '../results_for_cluster1/', N = 6)
+
+
+plts[[1]]
+
+
+
 
 

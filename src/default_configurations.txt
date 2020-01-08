@@ -1,0 +1,31 @@
+[default config]
+
+preprocessing = yes
+
+N_min_3mer = 1
+N_max_3mer = 10
+
+CPU_3mer = 30
+
+nmf_iters_3mer = 1e4
+nmf_conv_3mer = 1e-5
+nmf_max_3mer = 5e5
+
+boot_iters_3mer = 30
+boot_conv_3mer = 0.01
+boot_max_3mer = 600
+
+
+
+N_min_5mer = 1
+N_max_5mer = 10
+
+CPU_5mer = 30
+
+nmf_iters_5mer = 1e4
+nmf_conv_5mer = 1e-5
+nmf_max_5mer = 5e5
+
+boot_iters_5mer = 30
+boot_conv_5mer = 0.01
+boot_max_5mer = 600
