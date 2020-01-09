@@ -167,3 +167,33 @@ The only required parameter for this analysis is the optimum number of deciphere
 optimum_number_of_3mer_signatures_for_clustering = <a number>
 ```
 The contributions of 3mer mutational signatures to the mutational profiles of samples are used as the bases for clustering the samples. The results of this analysis are stored in the output directory in a folder named **cluster_samples_based_on_3mer_signatures**.
+
+
+5.4: Cluster samples based on contribution of 5-mer signatures
+-------------------------
+In this analysis, it is assumed that the 5-mer mutational signatures for the samples are already inferred in a previous run of CANCERSIGN. To enable this analysis, write the following line in the configuration file:
+```
+cluster_samples_based_on_5mer_signatures = yes
+```
+The only required parameter for this analysis is the optimum number of deciphered signatures (this number should be determined by the user based on CANCERSIGN output for the inference of 5-mer mutational signatures). This parameter is specified as follows:
+```
+optimum_number_of_5mer_signatures_for_clustering = <a number>
+```
+The contributions of 5mer mutational signatures to the mutational profiles of samples are used as the bases for clustering the samples. The results of this analysis are stored in the output directory in a folder named **cluster_samples_based_on_5mer_signatures**.
+
+
+
+5.5: Cluster samples based on mutation counts in 3-mer motifs
+-------------------------
+To enable this analysis, write the following line in the configuration file:
+```
+cluster_samples_based_on_3mer_motifs = yes
+```
+The only parameter that the user must provide for this analysis is the desired set of 3-mer motifs. Based on this parameter, the counts of mutations in the specified motifs are used as the bases for clustering the samples. This parameter is specified as follows:
+```
+selected_3mer_motifs_for_clustering = "motif-1", .  .  ., "motif-n"
+```
+where `"motif-i"` is a selected 3mer motif in a standard format. An example of this standard format is `G[C>T]A` which means `C>T` mutation with `G` as the left flanking nucleotide and `A` as the right flanking nucleotide.
+
+The results of this analysis are stored in the output directory in a folder named **cluster_samples_based_on_3mer_motifs**.
+
