@@ -156,4 +156,14 @@ All other parameters for this analysis have initial **default** values unless th
 The results of this analysis are stored in the output directory in a folder named **infered_5mer_signatures**.
 
 
-
+5.3: Cluster samples based on contribution of 3-mer signatures
+-------------------------
+In this analysis, it is assumed that the 3-mer mutational signatures for the samples are already inferred in a previous run of CANCERSIGN or the analysis for inferring the signatures are enabled in the current configurations. To enable this analysis, write the following line in the configuration file:
+```
+cluster_samples_based_on_3mer_signatures = yes
+```
+The only required parameter for this analysis is the optimum number of deciphered signatures (this number should be determined by the user based on CANCERSIGN output for the inference of 3-mer mutational signatures). This parameter is specified as follows:
+```
+optimum_number_of_3mer_signatures_for_clustering = <a number>
+```
+The contributions of 3mer mutational signatures to the mutational profiles of samples are used as the bases for clustering the samples. The results of this analysis are stored in the output directory in a folder named **cluster_samples_based_on_3mer_signatures**.
