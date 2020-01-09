@@ -33,7 +33,7 @@ Navigate to CANCERSIGN directory and run the following commands:
 $ cd src
 $ chmod +x cancersign
 ```
-And then add the "path to the CANCERSIGN **src** directory" to the PATH variable: 
+And then update **PATH** variable to include "*path to the CANCERSIGN **src** directory*": 
 ```
 $ export PATH=$PATH:</path/to/CANCERSIGN/src>
 ```
