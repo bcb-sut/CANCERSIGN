@@ -5,10 +5,9 @@
 # CANCERSIGN manual
 M. Bayati, H.R. Rabiee, et al., and H. Alinejad-Rokny, “**CANCERSIGN: a user-friendly and robust tool for identification and classification of mutational signatures and patterns in cancer genomes**”, preparing for submission.
 
-> **_NOTE:_**  This tool performs all analyses based on hg19 genome build.
-
 Prerequisites
 ============
+> **_NOTE:_**  This tool performs all analyses based on hg19 genome build.
 
 Operating System
 -------------------------
