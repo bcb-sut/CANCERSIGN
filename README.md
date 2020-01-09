@@ -30,12 +30,12 @@ $ gunzip </path/to/CANCERSIGN.gz>
 ```
 Navigate to CANCERSIGN directory and run the following commands:
 ```
-$ cd src
+$ cd </path/to/CANCERSIGN>
 $ chmod +x cancersign
 ```
-And then update **PATH** variable to include "*path to the CANCERSIGN **src** directory*": 
+And then update **PATH** variable to include "*path to the CANCERSIGN directory*": 
 ```
-$ export PATH=$PATH:</path/to/CANCERSIGN/src>
+$ export PATH=$PATH:</path/to/CANCERSIGN>
 ```
 You can edit ```.bashrc``` or any other appropriate shell script to set the above configuration persistently.
 
