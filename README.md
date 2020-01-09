@@ -158,7 +158,7 @@ The results of this analysis are stored in the output directory in a folder name
 
 5.3: Cluster samples based on contribution of 3-mer signatures
 -------------------------
-In this analysis, it is assumed that the 3-mer mutational signatures for the samples are already inferred in a previous run of CANCERSIGN or the analysis for inferring the signatures are enabled in the current configurations. To enable this analysis, write the following line in the configuration file:
+In this analysis, it is assumed that the 3-mer mutational signatures for the samples are already inferred in a previous run of CANCERSIGN. To enable this analysis, write the following line in the configuration file:
 ```
 cluster_samples_based_on_3mer_signatures = yes
 ```
