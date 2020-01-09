@@ -11,7 +11,7 @@ M. Bayati, H.R. Rabiee, et al., and H. Alinejad-Rokny, “**CANCERSIGN: a user-f
 
 Operating system
 -------------------------
-**Linux** or **MacOSX** is required.
+**Linux** or **Mac OS X** is required.
 
 R
 -------------------------
