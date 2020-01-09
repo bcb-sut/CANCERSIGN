@@ -1,6 +1,11 @@
+
+
+
+
 # CANCERSIGN manual
 M. Bayati, H.R. Rabiee, et al., and H. Alinejad-Rokny, “**CANCERSIGN: a user-friendly and robust tool for identification and classification of mutational signatures and patterns in cancer genomes**”, preparing for submission.
 
+> **_NOTE:_**  This tool performs all analyses based on hg19 genome build.
 
 Prerequisites
 ============
@@ -11,7 +16,7 @@ The recommended operating systems for using this tool are **Linux** and **MacOSX
 
 R
 -------------------------
-**R** is required to be installed and the command “**Rscript**” must be available. In addition, the following packages must be installed for **R**:
+This pipeline requires **R** version 3.6 or higher and needs the following packages to be installed:
 * BSgenome.Hsapiens.UCSC.hg19
 * data.table
 * doParallel
