@@ -197,3 +197,18 @@ where `"motif-i"` is a selected 3mer motif in a standard format. An example of t
 
 The results of this analysis are stored in the output directory in a folder named **cluster_samples_based_on_3mer_motifs**.
 
+
+
+5.6: Cluster samples based on mutation counts in 5-mer motifs
+-------------------------
+To enable this analysis, write the following line in the configuration file:
+```
+cluster_samples_based_on_5mer_motifs = yes
+```
+The only parameter that the user must provide for this analysis is the desired set of 5-mer motifs. Based on this parameter, the counts of mutations in the specified motifs are used as the bases for clustering the samples. This parameter is specified as follows:
+```
+selected_5mer_motifs_for_clustering = "motif-1", .  .  ., "motif-n"
+```
+where `"motif-i"` is a selected 5mer motif in a standard format. An example of this standard format is `GC[T>A]AT` which means `T>A` mutation with `GC` as the left flanking nucleotide and `AT` as the right flanking nucleotide.
+
+The results of this analysis are stored in the output directory in a folder named **cluster_samples_based_on_5mer_motifs**.
