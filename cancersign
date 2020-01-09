@@ -1,0 +1,36 @@
+#!/bin/bash
+
+CANCERSIGN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+rm -f .cancersign_config
+
+for arg in "$@"; do
+  shift
+  case "$arg" in
+    "--help") set -- "$@" "-h" ;;
+    "--config") set -- "$@" "-c" ;;
+    *)        set -- "$@" "$arg"
+  esac
+done
+
+cnf_path=""
+
+while getopts "hc" opt
+do
+  case "$opt" in
+    "h")  echo "   -c, --config           path to configuration file"; exit 0 ;;
+    "c")  if [ ! -f "$2" ]; then
+            echo "$2: file does not exist"
+            exit 0
+          fi
+          cnf_path=$2 ;;
+    "?")  echo "   -c, --config           path to configuration file"; exit 0 ;;
+  esac
+done
+
+(echo "[config]" && cat $cnf_path) > .cancersign_config
+
+Rscript "$CANCERSIGN_DIR/src/run.R" .cancersign_config "$CANCERSIGN_DIR/src/default_configurations.txt" "$CANCERSIGN_DIR/src"
+
+rm -f .cancersign_config
+
