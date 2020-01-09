@@ -11,11 +11,11 @@ M. Bayati, H.R. Rabiee, et al., and H. Alinejad-Rokny, “**CANCERSIGN: a user-f
 
 Operating system
 -------------------------
-The recommended operating systems for using this tool are **Linux** and **MacOSX**.
+**Linux** or **MacOSX** is required.
 
 R
 -------------------------
-This pipeline requires **R** version 3.6 or higher and needs the following packages to be installed:
+**R** version 3.6 or higher is required with the following packages installed:
 * BSgenome.Hsapiens.UCSC.hg19
 * data.table
 * doParallel
