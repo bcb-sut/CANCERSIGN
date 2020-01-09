@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CANCERSIGN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 rm -f .cancersign_config
 
@@ -30,7 +30,7 @@ done
 
 (echo "[config]" && cat $cnf_path) > .cancersign_config
 
-Rscript "$CANCERSIGN_DIR/run.R" .cancersign_config "$CANCERSIGN_DIR/default_configurations.txt" "$CANCERSIGN_DIR"
+Rscript "$SRC_DIR/run.R" .cancersign_config "$SRC_DIR/default_configurations.txt" "$SRC_DIR"
 
 rm -f .cancersign_config
 
