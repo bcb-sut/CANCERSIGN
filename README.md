@@ -28,12 +28,12 @@ Download CANCERSIGN.gz and uncompress it:
 ```
 $ gunzip </path/to/CANCERSIGN.gz>
 ```
-Inside CANCERSIGN directory, run the following commands to activate ```cancersign```:
+Navigate to CANCERSIGN directory and run the following commands:
 ```
 $ cd src
 $ chmod +x cancersign
 ```
-And then add the path to the CANCERSIGN **src** directory to the PATH variable: 
+And then add the "path to the CANCERSIGN **src** directory" to the PATH variable: 
 ```
 $ export PATH=$PATH:</path/to/CANCERSIGN/src>
 ```
