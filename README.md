@@ -119,7 +119,9 @@ infer_5mer_signatures = yes
 ```
 The parameter that the user must provide for this analysis is the desired set of 3-mer motifs. Based on this parameter, the tool expands the specified 3-mer motifs to all possible 5-mer motifs (which contain the specified 3-mer motifs) and then infers the 5-mer mutational signatures corresponding to them. This parameter is specified with the following line:
 
-`selected_3mer_motifs_for_5mer_signatures = "motif-1", . . ., "motif-n"`
+```
+selected_3mer_motifs_for_5mer_signatures = "motif-1", . . ., "motif-n"
+```
 where `"motif-i"` is a selected 3mer motif in a standard format. An example of this standard format is `G[C>T]A` which means `C>T` mutation with `G` as left flanking nucleotide and `A` as the right flanking nucleotide.
 
 All other parameters for this analysis have initial **default** values unless the user specifies them with the following lines:
