@@ -33,7 +33,7 @@ Update **PATH** variable to include "*path to the CANCERSIGN directory*":
 ```
 $ export PATH=$PATH:</path/to/CANCERSIGN>
 ```
-You can edit ```.bashrc``` or any other appropriate shell script to set the above configuration persistently.
+You can edit ```~/.profile``` or any other appropriate shell script to set the above configuration persistently.
 
 3: Run CANCERSIGN
 ============
