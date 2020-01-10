@@ -24,16 +24,12 @@ R
 
 2: Initial setup
 ============
-Download CANCERSIGN.gz and uncompress it:
-```
-$ gunzip </path/to/CANCERSIGN.gz>
-```
-Navigate to CANCERSIGN directory and run the following commands:
+Download and uncompress the CANCERSIGN folder. Then navigate to CANCERSIGN directory and run the following commands:
 ```
 $ cd </path/to/CANCERSIGN>
 $ chmod +x cancersign
 ```
-And then update **PATH** variable to include "*path to the CANCERSIGN directory*": 
+Update **PATH** variable to include "*path to the CANCERSIGN directory*": 
 ```
 $ export PATH=$PATH:</path/to/CANCERSIGN>
 ```
