@@ -6,11 +6,11 @@ Clustering <- function(input_file,
                        selected_motifs = NULL
                        ){
     
-    suppressMessages({
+    suppressMessages(suppressWarnings({
         library(data.table)
         library(NbClust)
         library(ggplot2)
-    })
+    }))
     
     if(basis == 'signatures'){
         

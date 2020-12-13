@@ -28,7 +28,7 @@ do
   esac
 done
 
-(echo "[config]" && cat $cnf_path) > .cancersign_config
+(echo "[config]" && cat "$cnf_path") > .cancersign_config
 
 Rscript "$CANCERSIGN_DIR/src/run.R" .cancersign_config "$CANCERSIGN_DIR/src/default_configurations.txt" "$CANCERSIGN_DIR/src"
 

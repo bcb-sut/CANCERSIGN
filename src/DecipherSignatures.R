@@ -39,9 +39,10 @@ DecipherSignatures <- function(input_file,
     cat('\n')
     cat(paste0('Deciphering ',as.character(k_mer),'-mer mutational signatures...\n'))
     
-    
-    suppressMessages(library(doParallel))
-    suppressMessages(library(data.table))
+    suppressMessages(suppressWarnings({
+        library(doParallel)
+        library(data.table)
+    }))
     
     if(detectCores() < number_of_CPUs){
         print(paste0('*** number of available CPUs is ', detectCores(), ' while the desired number of allocated CPUs is ', number_of_CPUs))

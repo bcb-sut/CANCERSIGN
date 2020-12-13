@@ -1,7 +1,11 @@
-library(data.table)
-library(ggplot2)
-# library(grid)
-# library(gridExtra)
+
+
+suppressMessages(suppressWarnings({
+    library(data.table)
+    library(ggplot2)
+    # library(grid)
+    # library(gridExtra)
+}))
 
 #rm(list=ls(all=TRUE))
 #graphics.off()

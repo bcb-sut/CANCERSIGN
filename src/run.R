@@ -1,7 +1,8 @@
 
-
-library(configr)
-library(data.table)
+suppressMessages(suppressWarnings({
+    library(configr)
+    library(data.table)
+}))
 
 args <- commandArgs(trailingOnly = TRUE)
 
@@ -18,7 +19,6 @@ for(o in names(user_config)){
     config[[o]] <- user_config[[o]]
 }
 
-
 inspect_config <- function(config, option){
     if(option %in% names(config)){
         return(config[[option]])
@@ -26,6 +26,18 @@ inspect_config <- function(config, option){
         return('none')
     }
 }
+
+#--------------------------------------------------------------------------------------------------------
+# check two required components of the config file
+if(inspect_config(config, 'input_file') == 'none'){
+    stop('"input_file" is missing in the configuration file')
+}
+if(inspect_config(config, 'output_dir') == 'none'){
+    stop('"output_dir" is missing in the configuration file')
+}
+config[['input_file']] <- gsub('\\\\','',config[['input_file']]) 
+config[['output_dir']] <- gsub('\\\\','',config[['output_dir']]) 
+#--------------------------------------------------------------------------------------------------------
 
 
 #--------------------------------------------------------------------------------------------------------

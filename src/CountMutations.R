@@ -10,10 +10,10 @@ CountMutations <- function(input_file_path, output_dir){
     start_time <- Sys.time()
     cat('loading libraries')
     s <- Sys.time()
-    suppressMessages({
+    suppressMessages(suppressWarnings({
         library(BSgenome.Hsapiens.UCSC.hg19)
         library(data.table)
-    })
+    }))
     f <- Sys.time()
     cat(paste0(' (',format(f-s),')\n'))        
     #------------------------------------------------------------------------------------
